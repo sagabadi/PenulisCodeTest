@@ -25,6 +25,6 @@ $router->group(['prefix' => 'api/v1'], function () use ($router) {
     $router->post('article/update/{id}', ['uses' => 'ArticleController@update']);
     $router->post('register', ['uses' => 'AuthController@register']);
     $router->get('article/{id}',  ['uses' => 'OnlyShowController@ArticletoSlug']);
-    $router->post('login', ['uses' => 'AuthController@login']);
-    $router->post('logout', ['uses' => 'AuthController@Logout']);
+    $router->post('users/login', ['uses' => 'AuthController@login']);
+    $router->post('users/logout', ['uses' => 'AuthController@Logout']);
 });
